@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: #0d0d0d;
+    color: #eaeaea;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner-fondo img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banner-texto h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.frase {
+    color: #ffa94d;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Navegación */
+.navbar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;       /* evita que salte a otra línea */
+    gap: 25px;
+    white-space: nowrap;     /* impide el salto de línea dentro de los enlaces */
+}
+
+.navbar a {
+    color: #9ef01a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #7ed957;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #7ed957;
+    transform: scale(1.2);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+h2 {
+    color: #9ef01a;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Sobre mí */
+.contenido-sobre-mi {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.foto-perfil {
+    width: 200px;
+    border-radius: 60%;
+    border: 3px solid #9ef01a;
+}
+
+/* Formación */
+.formacion ul {
+    list-style-type: "🌱 ";
+}
+
+/* Hobbies */
+.grid-hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.hobbie img {
+    width: 100px;
+    border-radius: 10px;
+}
+.hobbie p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Criptografía */
+.criptografia {
+    text-align: center;
+    margin-top: 60px;
+    padding: 50px 20px;
+    background: radial-gradient(circle at center, #111 0%, #0a0a0a 100%);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(158, 240, 26, 0.1);
+}
+
+.criptografia h2 {
+    color: #9ef01a;
+    margin-bottom: 20px;
+}
+
+.cripto-intro {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+.cripto-biografia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.cripto-texto {
+    flex: 1 1 400px;
+    text-align: justify;
+}
+
+.cripto-texto h3 {
+    color: #7ed957;
+    margin-bottom: 10px;
+}
+
+.frase-turing {
+    font-style: italic;
+    color: #ffa94d;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cripto-imgs {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.cripto-imgs img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    border: 2px solid #9ef01a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cripto-imgs img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(158, 240, 26, 0.6);
+}
+
+.cripto-linea-tiempo {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    border-left: 2px solid #9ef01a;
+    padding-left: 20px;
+}
+
+.cripto-linea-tiempo h4 {
+    color: #9ef01a;
+    margin-bottom: 10px;
+}
+
+.cripto-linea-tiempo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cripto-linea-tiempo li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.cripto-linea-tiempo li::before {
+    content: "🟢";
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+
+/* Galería */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.grid-galeria img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+.instagram {
+    text-align: center;
+    margin-top: 20px;
+}
+.instagram a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+.instagram a:hover {
+    text-decoration: underline;
+}
+
+/* Descargas */
+.descargas {
+    text-align: center;
+}
+.boton {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #9ef01a;
+    color: #0d0d0d;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.boton:hover {
+    background-color: #7ed957;
+}
+
+/* Contacto */
+.contacto {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contacto h2 {
+    margin-bottom: 10px;
+    color: #9ef01a;
+}
+
+.contacto .correo {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #eaeaea;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.iconos-redes a {
+    background-color: #111;
+    color: #9ef01a;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(158, 240, 26, 0.2);
+}
+
+.iconos-redes a:hover {
+    color: #0d0d0d;
+    background-color: #9ef01a;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(158, 240, 26, 0.5);
+}
+
+
+/* Footer */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top: 2px solid #1f1f1f;
+}
